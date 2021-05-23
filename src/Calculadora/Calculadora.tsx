@@ -1,11 +1,17 @@
+import React from 'react';
 import './Calculadora.css';
 
-function Calculadora() {
-  return (
-    <div className="Suma">
+class Calculadora extends React.Component {
+  render() {
+    return (
+      <div>
+      </div>
+    );
+  }
 
-    </div>
-  );
+  suma(a: number, b:number): number {
+    return a + b;
+  }
 }
 
-export default Calculadora;
+export { Calculadora };
