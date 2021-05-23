@@ -12,6 +12,10 @@ class Calculadora extends React.Component {
   suma(a: number, b:number): number {
     return a + b;
   }
+
+  resta(a: number, b:number): number {
+    return a - b;
+  }
 }
 
 export { Calculadora };
