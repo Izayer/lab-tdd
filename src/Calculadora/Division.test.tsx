@@ -22,7 +22,7 @@ test('Division de dos enteros positivos', () => {
   //Act
   const resultado: number = calculadora.division(a,b);
   //Assert
-  expect(resultado).to(resultado);
+  expect(resultado).toBe(resultado);
 });
 
 test('Division de un entero negativo y otro positivo con resultado negativo', () => {
@@ -62,12 +62,9 @@ test('Division de un entero positivo y otro negativo con resultado negativo', ()
 });
 
 test('Division de un entero positivo y 0', () => {
-  //Arrange
-  render(<Calculadora />);
   const a: number = 3;
   const b: number = 0;
-  //Act
-  const resultado: number = calculadora.division(a,b);
-  //Assert
-  expect(resultado).toThrowError("El divisor no puede ser 0");
+  expect(() => {
+    calculadora.division(a, b);
+  }).toThrowError( new Error("El divisor no puede ser 0"));
 });
